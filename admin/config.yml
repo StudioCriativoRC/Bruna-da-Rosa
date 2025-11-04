@@ -1,0 +1,153 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "static/uploads"
+
+locale: pt
+
+collections:
+  # Configurações gerais do site
+  - name: "configuracoes"
+    label: "Configurações Gerais"
+    files:
+      - file: "index.html"
+        label: "Página Inicial"
+        name: "homepage"
+        fields:
+          # Seção Hero
+          - label: "Seção Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Título Linha 1 (laranja)", name: "titulo_linha1", widget: "string", default: "A viagem foi linda," }
+              - { label: "Título Linha 2 (verde)", name: "titulo_linha2", widget: "string", default: "os lugares eram incríveis," }
+              - { label: "Título Linha 3 (ciano)", name: "titulo_linha3", widget: "string", default: "o momento foi mágico," }
+              - { label: "Título Linha 4 (branco)", name: "titulo_linha4", widget: "string", default: "mas nenhuma foto ficou boa?" }
+              - { label: "Subtítulo", name: "subtitulo", widget: "text" }
+              - { label: "Texto CTA", name: "cta_texto", widget: "string", default: "Quer saber como?" }
+              - { label: "Botão CTA", name: "cta_botao", widget: "string", default: "Sim, quero saber como!" }
+              - { label: "Imagem Principal", name: "imagem_1", widget: "image" }
+              - { label: "Imagem Secundária", name: "imagem_2", widget: "image" }
+
+          # Seção História
+          - label: "Seção História"
+            name: "historia"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string", default: "Deixa eu te contar uma história." }
+              - { label: "Texto da História", name: "texto", widget: "text" }
+              - { label: "Pergunta Final", name: "pergunta", widget: "string", default: "Se identificou com a Ana?" }
+              - { label: "Imagem 1", name: "imagem_1", widget: "image" }
+              - { label: "Imagem 2", name: "imagem_2", widget: "image" }
+              - { label: "Imagem 3", name: "imagem_3", widget: "image" }
+
+          # Introdução do Curso
+          - label: "Introdução do Curso"
+            name: "intro_curso"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Parágrafo 1", name: "paragrafo_1", widget: "text" }
+              - { label: "Parágrafo 2", name: "paragrafo_2", widget: "text" }
+
+          # Seção Sobre
+          - label: "Sobre a Autora"
+            name: "sobre"
+            widget: "object"
+            fields:
+              - { label: "Nome", name: "nome", widget: "string", default: "Bruna da Rosa" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Parágrafo 1", name: "paragrafo_1", widget: "text" }
+              - { label: "Parágrafo 2", name: "paragrafo_2", widget: "text" }
+              - { label: "Foto", name: "foto", widget: "image" }
+
+          # Galeria
+          - label: "Galeria"
+            name: "galeria"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "text" }
+
+          # Preços
+          - label: "Preços"
+            name: "preco"
+            widget: "object"
+            fields:
+              - { label: "Texto do Preço", name: "texto_preco", widget: "string", default: "menos de R$ 5 por dia." }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+
+  # Galeria de Imagens
+  - name: "galeria_imagens"
+    label: "Galeria de Fotos"
+    folder: "static/uploads"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Título/Descrição", name: "titulo", widget: "string" }
+      - { label: "Alt Text", name: "alt", widget: "string" }
+
+  # Público Alvo
+  - name: "publico_alvo"
+    label: "Público Alvo (Cards)"
+    files:
+      - file: "content/publico-alvo.json"
+        label: "Cards do Público Alvo"
+        name: "target_cards"
+        fields:
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Imagem", name: "imagem", widget: "image" }
+
+  # Conteúdo do Curso
+  - name: "conteudo_curso"
+    label: "Conteúdo do Curso"
+    files:
+      - file: "content/modulos-curso.json"
+        label: "Módulos do Curso"
+        name: "course_modules"
+        fields:
+          - label: "Módulos"
+            name: "modulos"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Cor de Fundo", name: "cor", widget: "select", options: ["escuro", "claro"] }
+
+  # FAQ
+  - name: "faq"
+    label: "Perguntas Frequentes"
+    files:
+      - file: "content/faq.json"
+        label: "FAQ"
+        name: "faq_items"
+        fields:
+          - label: "Título da Seção"
+            name: "titulo_secao"
+            widget: "string"
+            default: "Hora de esclarecer suas dúvidas:"
+          - label: "Perguntas e Respostas"
+            name: "perguntas"
+            widget: "list"
+            fields:
+              - { label: "Pergunta", name: "pergunta", widget: "string" }
+              - { label: "Resposta", name: "resposta", widget: "text" }
+
+  # Rodapé
+  - name: "rodape"
+    label: "Rodapé"
+    files:
+      - file: "content/footer.json"
+        label: "Informações do Rodapé"
+        name: "footer"
+        fields:
+          - { label: "Texto Desenvolvedor", name: "dev_texto", widget: "string", default: "Desenvolvido por:" }
+          - { label: "Nome do Studio", name: "studio_nome", widget: "string", default: "STUDIO CRIATIVO" }
+          - { label: "Texto Botão Topo", name: "botao_topo", widget: "string", default: "Voltar ao Topo" }
+

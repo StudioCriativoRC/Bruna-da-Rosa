@@ -1,0 +1,29 @@
+{
+  "cards": [
+    {
+      "descricao": "Deseja capturar momentos preciosos da infância dos seus filhos com qualidade profissional.",
+      "imagem": "Imagens/Criança.jpg"
+    },
+    {
+      "descricao": "Busca melhorar a qualidade das suas fotos nas redes sociais.",
+      "imagem": "Imagens/Redes-Sociais.jpg"
+    },
+    {
+      "descricao": "Ama viajar e quer que suas fotos façam justiça à beleza dos lugares visitados.",
+      "imagem": "Imagens/Viagem.jpg"
+    },
+    {
+      "descricao": "Sente frustração ao não conseguir registrar a verdadeira essência dos momentos especiais.",
+      "imagem": "Imagens/Momentos-Especiais.jpg"
+    },
+    {
+      "descricao": "Quer aprender técnicas simples e eficazes para tirar fotos incríveis com o celular.",
+      "imagem": "Imagens/Aprendizado.jpg"
+    },
+    {
+      "descricao": "Prefere aprender no seu próprio ritmo, sem complicações, e com resultados rápidos e visíveis.",
+      "imagem": "Imagens/Ritmo-Proprio.jpg"
+    }
+  ]
+}
+

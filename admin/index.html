@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo — CAPTURE</title>
+    <script src="https://unpkg.com/netlify-cms@^2.0/dist/netlify-cms.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+      #loading-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+      }
+      #error-message {
+        display: none;
+        padding: 20px;
+        background: #fee;
+        border: 2px solid #f00;
+        margin: 20px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container para o Netlify CMS -->
+    <div id="nc-root"></div>
+    
+    <!-- Mensagem de carregamento -->
+    <div id="loading-message">
+      <h2>Carregando painel administrativo...</h2>
+      <p>Se esta mensagem não desaparecer, verifique se você está acessando via um servidor HTTP (não file://)</p>
+    </div>
+    
+    <!-- Mensagem de erro -->
+    <div id="error-message">
+      <h3>⚠️ Erro ao carregar o CMS</h3>
+      <p>O Netlify CMS precisa ser acessado através de um servidor HTTP local. Use um dos seguintes comandos:</p>
+      <ul>
+        <li><strong>Python 3:</strong> <code>python -m http.server 8000</code></li>
+        <li><strong>Node.js:</strong> <code>npx http-server</code></li>
+        <li><strong>PHP:</strong> <code>php -S localhost:8000</code></li>
+      </ul>
+      <p>Depois acesse: <code>http://localhost:8000/admin/</code></p>
+    </div>
+    
+    <script>
+      // Aguarda o carregamento completo do CMS
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          if (typeof CMS !== 'undefined') {
+            // O CMS deve ter detectado automaticamente o admin/config.yml
+            console.log('✅ Netlify CMS carregado');
+            document.getElementById('loading-message').style.display = 'none';
+          } else {
+            console.error('❌ Netlify CMS não foi carregado');
+            document.getElementById('loading-message').style.display = 'none';
+            document.getElementById('error-message').style.display = 'block';
+          }
+          
+          // Verifica se o CMS renderizou corretamente
+          setTimeout(function() {
+            const ncRoot = document.getElementById('nc-root');
+            if (ncRoot && ncRoot.children.length === 0) {
+              document.getElementById('loading-message').style.display = 'none';
+              document.getElementById('error-message').style.display = 'block';
+            }
+          }, 2000);
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
+

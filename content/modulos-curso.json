@@ -1,0 +1,50 @@
+{
+  "modulos": [
+    {
+      "titulo": "10 Vídeos curtos e práticos:",
+      "descricao": "Técnicas simples e avançadas de fotografia para aprender no seu ritmo.",
+      "cor": "escuro"
+    },
+    {
+      "titulo": "Vídeo prático:",
+      "descricao": "Aplicação das técnicas em um cenário real.",
+      "cor": "claro"
+    },
+    {
+      "titulo": "Material de apoio:",
+      "descricao": "Guias práticos e checklists para reforçar o aprendizado.",
+      "cor": "escuro"
+    },
+    {
+      "titulo": "Presets exclusivos:",
+      "descricao": "Edição de fotos com um clique para resultados profissionais.",
+      "cor": "claro"
+    },
+    {
+      "titulo": "Grupo VIP no WhatsApp:",
+      "descricao": "Suporte, feedback e interação com outros alunos.",
+      "cor": "escuro"
+    },
+    {
+      "titulo": "Composição e enquadramento:",
+      "descricao": "Regras de ouro para capturar a essência do momento.",
+      "cor": "claro"
+    },
+    {
+      "titulo": "Segredos da iluminação:",
+      "descricao": "Como usar luz natural e artificial a seu favor.",
+      "cor": "escuro"
+    },
+    {
+      "titulo": "Dicas para fotos de viagem e infância:",
+      "descricao": "Técnicas específicas para paisagens e momentos preciosos.",
+      "cor": "claro"
+    },
+    {
+      "titulo": "Atualizações regulares:",
+      "descricao": "Novos conteúdos adicionados para manter você atualizado.",
+      "cor": "escuro"
+    }
+  ]
+}
+
