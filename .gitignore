@@ -1,0 +1,52 @@
+# Arquivos do sistema Windows
+AppData/
+Contacts/
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+3D Objects/
+OneDrive/
+Zomboid/
+
+# Arquivos de configuração do sistema
+NTUSER.DAT*
+ntuser.dat*
+ntuser.ini
+workspace.code-workspace
+
+# Logs do sistema
+*.log
+
+# Pastas de programas
+.lunarclient/
+.openjfx/
+.ssh/
+.vscode/
+.windsurf/
+MJL-TOOLS*/
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Ignorar tudo que não seja do projeto
+/*
+!index.html
+!admin/
+!content/
+!Elementos/
+!Imagens/
+!static/
+!styles.css
+!script.js
+!script-cms-integration.js
+!README.md
+!OTIMIZACAO-IMAGENS.md
+!.gitignore
