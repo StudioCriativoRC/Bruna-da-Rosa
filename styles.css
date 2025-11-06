@@ -571,7 +571,18 @@ img {
     z-index: 2;
 }
 
-.about-image > img:not(.about-logo-element) {
+.about-logo-bottom {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 65px);
+    transform: translate(-50%, 50%);
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.about-image > img:not(.about-logo-element):not(.about-logo-bottom) {
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -1056,7 +1067,7 @@ img {
     .hero-img-large,
     .hero-img-small,
     .story-img,
-    .about-image > img:not(.about-logo-element),
+    .about-image > img:not(.about-logo-element):not(.about-logo-bottom),
     .gallery-images img,
     .target-image img {
         image-rendering: auto;
@@ -1243,9 +1254,16 @@ img {
     }
 
     /* Ajustes da seção About no mobile */
-    .about-image > img:not(.about-logo-element) {
+    .about-image > img:not(.about-logo-element):not(.about-logo-bottom) {
         min-height: 380px;
         max-width: 100%;
+    }
+
+    .about-logo-bottom {
+        bottom: 0;
+        left: calc(50% - 15px);
+        transform: translate(-50%, 50%);
+        width: 300px;
     }
 
     /* Footer lado a lado no mobile com elementos menores */
@@ -1366,6 +1384,13 @@ img {
     .story-img-2,
     .story-img-3 {
         grid-column: auto;
+    }
+
+    .about-logo-bottom {
+        bottom: 0;
+        left: calc(50% - 15px);
+        transform: translate(-50%, 50%);
+        width: 300px;
     }
 }
 
@@ -1489,7 +1514,7 @@ img {
 .hero-img-large,
 .hero-img-small,
 .story-img,
-.about-image > img:not(.about-logo-element),
+.about-image > img:not(.about-logo-element):not(.about-logo-bottom),
 .gallery-images img,
 .target-image img {
     cursor: pointer;
@@ -1499,7 +1524,7 @@ img {
 .hero-img-large:hover,
 .hero-img-small:hover,
 .story-img:hover,
-.about-image > img:not(.about-logo-element):hover,
+.about-image > img:not(.about-logo-element):not(.about-logo-bottom):hover,
 .gallery-images img:hover,
 .target-image img:hover {
     opacity: 0.9;
