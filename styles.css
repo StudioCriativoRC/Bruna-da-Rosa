@@ -1390,7 +1390,7 @@ img {
         bottom: 0;
         left: calc(50% - 15px);
         transform: translate(-50%, 50%);
-        width: 110px;
+        width: 100px;
     }
 }
 
