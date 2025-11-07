@@ -577,7 +577,7 @@ img {
     left: calc(50% - 65px);
     transform: translate(-50%, 50%);
     width: 300px;
-    height: auto;
+    height: 90px;
     object-fit: contain;
     z-index: 2;
 }
