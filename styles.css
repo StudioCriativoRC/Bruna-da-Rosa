@@ -576,7 +576,7 @@ img {
     bottom: 0;
     left: calc(50% - 65px);
     transform: translate(-50%, 50%);
-    width: 275px;
+    width: 300px;
     height: 110px;
     object-fit: contain;
     z-index: 2;
@@ -1263,7 +1263,7 @@ img {
         bottom: 0;
         left: calc(50% - 15px);
         transform: translate(-50%, 50%);
-        width: 110px;
+        width: 220px;
     }
 
     /* Footer lado a lado no mobile com elementos menores */
